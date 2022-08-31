@@ -27,7 +27,7 @@ echo "DISTRIB_SOURCECODE='openwrt.master'" >>package/base-files/files/etc/openwr
 # ------------------------------- Other started -------------------------------
 #
 # Add luci-app-amlogic
-# svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 
 # coolsnowwolf default software package replaced with Lienol related software package
 # rm -rf feeds/packages/utils/{containerd,libnetwork,runc,tini}
@@ -35,6 +35,7 @@ echo "DISTRIB_SOURCECODE='openwrt.master'" >>package/base-files/files/etc/openwr
 
 # Add third-party software packages (The entire repository)
 # git clone https://github.com/libremesh/lime-packages.git package/lime-packages
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 # Add third-party software packages (Specify the package)
 # svn co https://github.com/libremesh/lime-packages/trunk/packages/{shared-state-pirania,pirania-app,pirania} package/lime-packages/packages
 # Add to compile options (Add related dependencies according to the requirements of the third-party software package Makefile)
